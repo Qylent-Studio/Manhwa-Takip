@@ -50,7 +50,7 @@ class AppearanceSettingsTest {
             onIdle()
             library.onActivity { assertEquals(3, descendants(it.window.decorView).filterIsInstance<GridView>().single().numColumns) }
             onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
-            onView(withText("Uygulama ayarları")).perform(scrollTo(), click())
+            onView(withText("Görünüm")).perform(scrollTo(), click())
             onView(withText("Satır başına kart")).perform(scrollTo(), click())
             onView(withText("2 kart")).perform(click())
             onIdle()
@@ -112,7 +112,7 @@ class AppearanceSettingsTest {
             var originalInputSize = 0f
             library.onActivity { originalInputSize = descendants(it.window.decorView).filterIsInstance<android.widget.EditText>().first { v -> v.hint == "Seri ara" }.textSize }
             onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
-            onView(withText("Uygulama ayarları")).perform(scrollTo(), click())
+            onView(withText("Görünüm")).perform(scrollTo(), click())
             onView(withText("Yazı boyutu")).perform(scrollTo(), click())
             onView(withText("Çok büyük")).perform(click()); onIdle()
             pressBack(); pressBack(); onIdle()

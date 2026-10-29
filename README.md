@@ -5,14 +5,14 @@ etmek için geliştirilen açık kaynak uygulama.
 
 ## Sürüm ve indirme durumu
 
-Güncel herkese açık sürüm: **0.10.0**. Paketler
+Güncel Android sürümü: **0.10.1**; Windows sürümü: **0.10.0**. Paketler
 [GitHub Releases](https://github.com/Qylent-Studio/Manhwa-Takip/releases)
 sayfasından indirilir:
 
-- `Manhwa-Takip-0.10.0.apk` — Android 8 (API 26) ve üzeri. Release anahtarıyla
+- `Manhwa-Takip-0.10.1.apk` — Android 8 (API 26) ve üzeri. Release anahtarıyla
   imzalanmıştır; mevcut debug kurulumunun üzerine kurulamayabilir. Ayrıntı:
   [Veri güvenliği ve güncelleme](#veri-güvenliği-ve-güncelleme).
-- `Setup.exe` — Windows 11. Python/Tk ve Pillow çalışma ortamı paket içindedir;
+- `Setup.exe` — Windows 11, **0.10.0 (değişmedi)**. Python/Tk ve Pillow çalışma ortamı paket içindedir;
   ayrıca Python kurmayın. Paket imzasızdır; SmartScreen uyarısı görülebilir.
 - Her iki dosyanın yanında bir `.sha256` dosyası yayımlanır. Çalıştırmadan veya
   kurmadan önce indirdiğiniz dosyanın SHA-256 değerini bu dosyayla karşılaştırın.
@@ -34,6 +34,8 @@ Kaynak kodu da aynı depoda yayımlanır; derleme adımları aşağıda.
 - Kaynak bağlantıları ve kapaklarla çalışma; kaynaklara erişim dış sitelerin
   davranışına ve erişilebilirliğine bağlıdır.
 - Yerel veri ve yedekleme akışı.
+- Sade Android ayarları: üstte tema, günlük görünüm/kütüphane/yedekleme grupları;
+  AI ve bilgisayar bağlantıları açılır **Gelişmiş** bölümündedir.
 - GPT'den elle alınan JSON ile eser bilgilerini içe aktarma; uygulama GPT'ye
   otomatik veri yüklemez.
 - Windows'ta tema seçenekleri, sistem tepsisi ve isteğe bağlı otomatik başlatma.

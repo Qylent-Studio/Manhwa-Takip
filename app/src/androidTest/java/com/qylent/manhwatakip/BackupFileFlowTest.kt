@@ -45,6 +45,7 @@ class BackupFileFlowTest {
         val password = "fixture-pass123"
         ActivityScenario.launch(MainActivity::class.java).use {
             onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+            onView(withText("Yedekleme")).perform(scrollTo(), click())
             onView(withText("Yedekler")).perform(scrollTo(), click())
             onView(withText("Şifreli tam yedek (anahtarlar dahil)")).perform(click())
             onView(withText("Parolalı yedek oluştur")).perform(scrollTo(), click())
@@ -83,6 +84,7 @@ class BackupFileFlowTest {
         val file = "manhwa-export-$suffix.json"
         ActivityScenario.launch(MainActivity::class.java).use {
             onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+            onView(withText("Yedekleme")).perform(scrollTo(), click())
             onView(withText("Yedekler")).perform(scrollTo(), click())
             onView(withText("Dosyaya yedekle")).inRoot(isDialog()).perform(click())
             onView(withText("Dosya seç")).inRoot(isDialog()).perform(click())
@@ -131,6 +133,7 @@ class BackupFileFlowTest {
 
     private fun chooseImport(file: String) {
         onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+        onView(withText("Yedekleme")).perform(scrollTo(), click())
         onView(withText("Yedekler")).perform(scrollTo(), click())
         onView(withText("Yedekten geri yükle")).inRoot(isDialog()).perform(click())
         downloads()

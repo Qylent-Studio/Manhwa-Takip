@@ -38,9 +38,12 @@ class DrawerUiTest {
         ActivityScenario.launch(MainActivity::class.java).use {
             try {
             onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+            onView(withContentDescription("Ayar: Kütüphane")).perform(scrollTo(), click())
             onView(withText("İstatistikler")).perform(scrollTo(), click())
             onView(withText("İstatistikler")).check(matches(isDisplayed()))
             pressBack()
+            pressBack()
+            onView(withText("Yedekleme")).perform(scrollTo(), click())
             onView(withText("Yedekler")).perform(scrollTo(), click())
             TestWindowReadiness.awaitFocusedDialog("Yedekler")
             onView(withText("Dosyaya yedekle")).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click())
@@ -105,8 +108,12 @@ class DrawerUiTest {
                         onView(withContentDescription("Seri ekle")).check(matches(isCompletelyDisplayed()))
                         onView(withContentDescription("Gezinme: AI sohbeti")).check(matches(isCompletelyDisplayed()))
                         onView(withContentDescription("Gezinme: Ayarlar")).check(matches(isCompletelyDisplayed())).perform(click())
+                        onView(withText("Yedekleme")).perform(scrollTo(), click())
                         onView(withText("Yedekler")).perform(scrollTo()).check(matches(isCompletelyDisplayed()))
+                        pressBack()
+                        onView(withContentDescription("Ayar: Kütüphane")).perform(scrollTo(), click())
                         onView(withText("İstatistikler")).perform(scrollTo()).check(matches(isCompletelyDisplayed()))
+                        pressBack()
                         pressBack()
                     }
                 }

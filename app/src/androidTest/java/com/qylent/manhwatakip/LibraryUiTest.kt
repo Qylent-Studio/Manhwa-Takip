@@ -149,6 +149,7 @@ class LibraryUiTest {
             Intents.intending(hasAction(Intent.ACTION_OPEN_DOCUMENT)).respondWith(ActivityResult(Activity.RESULT_CANCELED, null))
             ActivityScenario.launch(MainActivity::class.java).use {
                 onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+                onView(withText("Yedekleme")).perform(scrollTo(), click())
                 onView(withText("Yedekler")).perform(scrollTo(), click())
                 onView(withText("Yedekten geri yükle")).perform(click())
             }
@@ -165,6 +166,7 @@ class LibraryUiTest {
             Intents.intending(hasAction(Intent.ACTION_CREATE_DOCUMENT)).respondWith(ActivityResult(Activity.RESULT_OK, unavailable))
             ActivityScenario.launch(MainActivity::class.java).use {
                 onView(withContentDescription("Gezinme: Ayarlar")).perform(click())
+                onView(withText("Yedekleme")).perform(scrollTo(), click())
                 onView(withText("Yedekler")).perform(scrollTo(), click())
                 onView(withText("Dosyaya yedekle")).inRoot(isDialog()).perform(click())
                 onView(withText("Dosya seç")).inRoot(isDialog()).perform(click())
