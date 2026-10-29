@@ -1,0 +1,4 @@
+<resources>
+    <item name="loading" type="id" />
+    <item name="navigation_suppressed" type="id" />
+</resources>

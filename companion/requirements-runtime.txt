@@ -1,0 +1,6 @@
+# WebP decoding (also available to the later tray implementation).
+# Verified cp313 Windows wheel; install explicitly in the application runtime venv.
+Pillow==13.0.0
+# Windows notification-area adapter, LGPL-3.0-or-later; transitive six is MIT.
+pystray==0.19.5
+six==1.17.0

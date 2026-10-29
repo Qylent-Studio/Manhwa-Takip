@@ -1,0 +1,20 @@
+[
+  {
+    "file": "app/src/test/java/com/qylent/manhwatakip/PublicWebClientTest.kt",
+    "category": "private-network",
+    "sha256": "696391bccfcab3c7397f05ae4672d09927587dbd51daaeeda12ae70bf55558f7",
+    "rationale": "Complete file manually reviewed: synthetic forbidden-address and mixed-DNS SSRF rejection fixtures using injected resolver/transport; not live endpoints or defaults."
+  },
+  {
+    "file": "companion/covers.py",
+    "category": "private-network",
+    "sha256": "7527fb6a92279c10b853d2d52c3bf45b5b05a6e4b117d6a739b60b19779de603",
+    "rationale": "Complete file manually reviewed: private-network literals only define CIDR ranges denied by public_address for SSRF protection. No live endpoint defaults; optional AI address comes from excluded private configuration."
+  },
+  {
+    "file": "companion/test_covers.py",
+    "category": "private-network",
+    "sha256": "d5e338ae49cfb8c182691a460850d2f19976d063fec34fa4a5f29ae344ab3c29",
+    "rationale": "Complete file manually reviewed: synthetic forbidden-address, mixed-DNS and private-redirect SSRF rejection fixtures with injected resolver/transport. No live private endpoints or defaults."
+  }
+]

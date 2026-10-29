@@ -1,0 +1,9 @@
+# ChatGPT masaüstü için yerel MCP kurulum örneği.
+# Mevcut config.toml içine yalnızca bu tablo eklenir; mevcut dosyanın yerini almaz.
+# Önce bridge/README.md içindeki telefon eşleştirmesini tamamla.
+[mcp_servers.manhwa_takip]
+command = "python"
+args = ["C:/path/to/project/bridge/bridge.py"]
+cwd = "C:/path/to/project"
+enabled = true
+enabled_tools = ["list_library", "propose_change", "proposal_status"]

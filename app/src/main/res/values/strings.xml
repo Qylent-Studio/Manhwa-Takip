@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Manhwa Takip</string>
+    <string name="library_count">%1$d seri · %2$d gösteriliyor</string>
+    <string name="chapter_missing">Henüz bölüm belirtilmedi</string>
+    <string name="chapter_number">Bölüm %1$s</string>
+    <string name="series_summary">%1$s · %2$s</string>
+</resources>
